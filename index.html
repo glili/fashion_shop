@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaMode</title>
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style_projet.css">
+</head>
+
+<body>
+    <!-- top navbar -->
+    <nav class="navbar navbar-expand-lg id navbar">
+        <div class="container-fluid">
+            <!-- <div class="row"> -->
+            <a href="index.html" class="navbar-brand"><img src="image/logo.webp" alt="logo LaMode" id="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar"
+                aria-controls="Navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item menu__item col-5 col-md-2"><a href="#" class="nav-link active">Accueil</a></li>
+                    <li class="nav-item menu__item col-5 col-md-2"><a href="produits.html" class="nav-link">Produits</a>
+                    </li>
+                    <li class="nav-item menu__item col-5 col-md-2"><a href="presentation.html"
+                            class="nav-link">Presentation</a></li>
+                    <li class="nav-item menu__item col-5 col-md-2"><a href="local.html" class="nav-link">Local</a>
+                    </li>
+                    <li class="nav-item menu__item col-5 col-md-2"><a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item menu__item col-5 col-md-2"><a href="compte.html" class="nav-link">Compte</a>
+                    </li>
+                    <!-- <li class="nav-item menu__item col-5 col-md-3"><a href="inscription.html" class="nav-link">Inscription</a></li> -->
+                </ul>
+            </div>
+            <!-- </div> -->
+        </div>
+    </nav>
+    <!-- navbar bottom -->
+    <div class="header-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="offset-md-6 col-md-3">
+                    <form action="#" class="d-flex serch">
+                        <input type="search" autocomplete="on" name="chercher" data-error="Erreur"
+                            placeholder="Chercher" class="form-control me-2">
+                        <button type="submit" class="search"><i class="bi bi-search"></i></button>
+                    </form>
+                </div>
+                <div class="actions col-md-3">
+                    <a href="#" class="actions-icon-favorite"><i class="bi bi-heart-fill"></i></a>
+                    <div class="action-heade-cart">
+                        <div class="cart-header-icon">
+                            <a href="#" class="cart-header-link"><i class="bi bi-cart-fill"></i></a>
+                            <span>0 $</span>
+                        </div>
+                        <div class="cart-header-body">
+                            <div class="cart-header-summ"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner -->
+    <section class="banner">
+        <div class="content">
+            <h1> <span>Soyez belles et beaux</h1>
+            <p>Vous trouverez ici des articles pour toutes les occasions, ainsi que des accessoires.
+                <br>Nous savons comment vous aider à montrer élégant, moderne, intéressant.
+                <br>Nous pouvons vous aider à avoir confiance en soi.
+            </p>
+            <div class="btn"><button>Shop Now</button></div>
+
+        </div>
+        <div class="banner__img">
+            <img src="image/clothes-shopping.gif" alt="main banner">
+        </div>
+    </section>
+
+        <!-- product cards -->
+        <div class="container" id="product-cards">
+            <h1 class="text-center">Nouveaute</h1>
+            <div class="row" >
+              <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                  <img src="image/black_skirt.webp" alt="Jupe femme">
+                  <div class="card-body">
+                    <h3 class="text-center">Jupe Femme<br> Zarra</h3>
+                    <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                    <h2>50$</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                  <img src="image/red_dress.webp" alt="Robe rouge de cocleil femme">
+                  <div class="card-body">
+                    <h3 class="text-center">Robe femme<br>Zarra</h3>
+                    <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                    <h2>150$</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                  <img src="image/orange_blouse.webp" alt="Blouse orange femme">
+                  <div class="card-body">
+                    <h3 class="text-center">Blouse femme <br>Zalando</h3>
+                    <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                    <h2>60$</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                  <img src="image/white_blouse.webp" alt="Blouse blanche femme">
+                  <div class="card-body">
+                    <h3 class="text-center">Blouse femme<br>Cartier</h3>
+                    <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                    <h2>60$</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="row" style="margin-top: 30px;">
+              <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                  <img src="image/shirt.webp" alt="Chemise homme">
+                  <div class="card-body">
+                    <h3 class="text-center">Chemise homme<br>Zarra</h3>
+                    <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                    <h2>70$</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                  <img src="image/jeans_men.webp" alt="Jeans homme">
+                  <div class="card-body">
+                    <h3 class="text-center">Jeans homme<br>Cartier</h3>
+                    <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                    <h2>100$</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 py-3 py-md-0">
+                <div class="card">  
+                  <img src="image/jeans.webp" alt="Jeans femme">
+                  <div class="card-body">
+                    <h3 class="text-center">Jeans femme<br>Zalando</h3>
+                    <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                    <h2>100$</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                  <img src="image/red_blouse.webp" alt="Blouse rouge femme">
+                  <div class="card-body">
+                    <h3 class="text-center">Blouse femme<br>Zarra</h3>
+                    <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                    <h2>50$</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                  <img src="image/manteau.webp" alt="Veste homme">
+                  <div class="card-body">
+                    <h3 class="text-center">Veste homme<br>Zarra</h3>
+                    <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                    <h2>50$</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                  <img src="image/scarf.webp" alt="Foulard">
+                  <div class="card-body">
+                    <h3 class="text-center">Foulard<br>Zarra</h3>
+                    <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                    <h2>50$</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                  <img src="image/cap.webp" alt="Chapeau">
+                  <div class="card-body">
+                    <h3 class="text-center">Chapeau<br>Zarra</h3>
+                    <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                    <h2>50$</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- product cards -->
+
+              <!-- other cards -->
+    <div class="container" id="rabais-cards">
+        <div class="row">
+          <div class="col-md-6 py-3 py-md-0">
+            <div class="card">
+              <img src="image/orange_blouse.webp" alt="Vetements d'automn femme">
+              <div class="card-img-overlay">
+                <h3>Femme</h3>
+                <h5>Collection precedente</h5>
+                <p>Up to 50$ Off</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 py-3 py-md-0">
+            <div class="card">
+              <img src="image/manteau.webp" alt="Vetments d'automn homme">
+              <div class="card-img-overlay">
+                <h3>Homme</h3>
+                <h5>Collection precedente</h5>
+                <p>Up to 50$ Off</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="achats col-md-12 py-3 py-md-0">
+            <button id="achat">Acheter maintenant</button>
+          </div>
+      </div>
+      <!-- other cards -->
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-links col-lg-3 col-md-6 ">
+                        <h2>La Mode</h2>
+                        <ul>
+                            <li><a href="#">Accueil</a></li>
+                            <li><a href="produits.html">Produits</a></li>
+                            <li><a href="presentation.html">Presentation</a></li>
+                            <li><a href="local.html">Local</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="social-links col-lg-3 col-md-6">
+                        <h2>Suivez nous</h2>
+                        <div class="socail-links mt-3">
+                            <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="inscription">
+                        <h2 class="text-center">Inscrivez vous a notre infolettre.</h2>
+                        <div class="input">
+                          <input type="text" placeholder="Entrez votre Email..">
+                          <button id="inscription">INSCRIPTION</button>
+                        </div>
+                      </div>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            &copy; Copyright. All Rights Reserved
+        </div>
+    </footer>
+    <!-- footer -->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
