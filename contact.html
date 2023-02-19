@@ -2,61 +2,85 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LaMode</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
-    <style>
-        .icon-menu {
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LaMode</title>
+  <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style_projet.css">
 </head>
 
-<body>
-
-
-
-    <div class="container" id="contact">
-        <div class="row" style="margin-top: 50px;">
-            <div class="col-md-4 py-3 py-md-0">
-                <div class="card">
-                    <i class="fas fa-phone"> Phone</i>
-                    <h6>+0000000000000000000</h6>
-                </div>
-            </div>
-            <div class="col-md-4 py-3 py-md-0">
-                <div class="card">
-                    <i class="fas fa-envelope"> Email</i>
-                    <h6>example@gmail.com</h6>
-                </div>
-            </div>
-            <div class="col-md-4 py-3 py-md-0">
-                <div class="card">
-                    <i class="fas fa-location-dot"> Address</i>
-                    <h6>Karachi Sindh Pakistan</h6>
-                </div>
-            </div>
-        </div>
-        <div class="row" style="margin-top: 30px;">
-            <div class="col-md-4 py-3 py-md-0">
-                <input type="text" class="form-control form-control" placeholder="Name">
-            </div>
-            <div class="col-md-4 py-3 py-md-0">
-                <input type="text" class="form-control form-control" placeholder="Email">
-            </div>
-            <div class="col-md-4 py-3 py-md-0">
-                <input type="text" class="form-control form-control" placeholder="Phone">
-            </div>
-            <div class="form-group" style="margin-top: 30px;">
-                <textarea class="form-control" id="" rows="5" placeholder="Message"></textarea>
-            </div>
-            <div class="messagebtn text-center"><button>Message</button></div>
-        </div>
+<body class="form-body">
+  <!-- navigation -->
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand"><img src="image/logo.webp" alt="Logo LaMode fashion store"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+          <li class="nav-item"><a href="produits.html" class="nav-link">Produits</a></li>
+          <li class="nav-item"><a href="presentation.html" class="nav-link">Presentation</a></li>
+          <li class="nav-item"><a href="local.html" class="nav-link">Local</a></li>
+          <li class="nav-item"><a href="#" class="nav-link active">Contact</a></li>
+          <li class="nav-item"><a href="compte.html" class="nav-link">Compte</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
+  <!-- banner -->
+  <!-- <div class="container-fluid banner padded">
+    <div class="row">
+      <div class="offset-lg-2 col-lg-4 padded">
+        <h1>Soyez belles et beaux</h1>
+        <p>Vous trouverez ici des articles pour toutes les occasions, ainsi que des accessoires.
+          <br>Nous savons comment vous aider à montrer élégant, moderne, intéressant.
+          <br>Nous pouvons vous aider à avoir confiance en soi.
+        </p>
+      </div>
+      <div class=" offset-lg-2 col-lg-4">
+        <img src="image/clothes-shopping.gif" alt="main banner">
+      </div>
+
+    </div>
+  </div> -->
+
+  <!-- contact form -->
+  <div class="container ml-auto">
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6">
+        <div id="form-inscription">
+          <h1 class="text-center">Pour nous joindre:</h1>
+          <form class="form-group" action="index.php" method="post">
+            <div class="row">
+              <label for="email3">Email</label>
+              <input type="email" name="email" id="email3" class="form-control"  pattern="(^[a-z0-9]+)@([a-z0-9])+(\.)([a-z]{2,4})" splaceholder="Enntrez votre email">
+              <label for="motif">Motif du contact</label>
+              <input type="motif" class="form-control" id="motif" placeholder="Entez le motif du contact">
+
+              <textarea name="message" cols="52" rows="5" onclick="this.value=''">Message</textarea>
+
+              <div class="checkbox col-lg-8">
+                <label for="checkbox"><input type="checkbox" id="checkbox"> Voulais vous inscrire a notre
+                  infolettre</label>
+              </div>
+
+              <button type="submit" name="submit"  onclick="verificationInfo();" value="submit" id="submit3" class="btn btn-primary">Envoyer</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-3"></div>
+    </div>
+  </div>
+  </div>
   <!-- footer -->
   <footer class="footer">
     <div class="footer-top">
@@ -66,10 +90,10 @@
             <h2>La Mode</h2>
             <ul>
               <li><a href="index.html">Accueil</a></li>
-              <li><a href="#">Produits</a></li>
+              <li><a href="produits.html">Produits</a></li>
               <li><a href="presentation.html">Presentation</a></li>
               <li><a href="local.html">Local</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a class="active" href="#">Contact</a></li>
             </ul>
           </div>
           <div class="social-links col-lg-3 col-md-6">
@@ -82,12 +106,11 @@
           </div>
           <div class="inscription">
             <h2 class="text-center">Inscrivez vous a notre infolettre.</h2>
-            <div class="input">
-              <input type="text" placeholder="Entrez votre Email..">
-              <button id="inscription">INSCRIPTION</button>
-            </div>
+            <form class="input" action="index.php" method="post">
+              <input type="email"  id="email1" pattern="(^[a-z0-9]+)@([a-z0-9])+(\.)([a-z]{2,4})"  placeholder="Entrez votre Email..">
+              <button  type="submit" name="submit" value="submit" onclick="verificationInfo();"  class="btn btn-primary" id="info-register">INSCRIPTION</button>
+            </form>
           </div>
-
         </div>
       </div>
     </div>
@@ -112,5 +135,3 @@
 </body>
 
 </html>
-
-

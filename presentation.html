@@ -2,36 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LaMode</title>
-    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style_projet.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LaMode</title>
+  <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style_projet.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md">
-        <div class="container-fluid">
-            <a href="" class="navbar-brand"><img src="image/logo.webp" alt="Logo LaMode fashion store"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class=" nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
-                    <li class="nav-item"><a href="produits.html" class="nav-link">Produits</a></li>
-                    <li class="nav-item active"><a href="#" class="nav-link">Presentation</a></li>
-                    <li class="nav-item"><a href="local.html" class="nav-link">Local</a></li>
-                    <li class="nav-item"><a href="compte.html" class="nav-link">Contact</a></li>
-                    <li class="nav-item"><a href="compte.html" class="nav-link">Compte</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <!-- navigation -->
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand"><img src="image/logo.webp" alt="Logo LaMode fashion store"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+          <li class="nav-item"><a href="produits.html" class="nav-link">Produits</a></li>
+          <li class="nav-item"><a href="#" class="nav-link active">Presentation</a></li>
+          <li class="nav-item"><a href="local.html" class="nav-link">Local</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="compte.html" class="nav-link">Compte</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <figure>
         <div class="fixed-wrap">
             <div id="fixed">
@@ -117,8 +118,8 @@
             <h2>La Mode</h2>
             <ul>
               <li><a href="index.html">Accueil</a></li>
-              <li><a href="#">Produits</a></li>
-              <li><a href="presentation.html">Presentation</a></li>
+              <li><a href="produits.html">Produits</a></li>
+              <li><a class="active" href="#">Presentation</a></li>
               <li><a href="local.html">Local</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -133,12 +134,11 @@
           </div>
           <div class="inscription">
             <h2 class="text-center">Inscrivez vous a notre infolettre.</h2>
-            <div class="input">
-              <input type="text" placeholder="Entrez votre Email..">
-              <button id="inscription">INSCRIPTION</button>
-            </div>
+            <form class="input" action="index.php" method="post">
+              <input type="email"  id="email1" pattern="(^[a-z0-9]+)@([a-z0-9])+(\.)([a-z]{2,4})"  placeholder="Entrez votre Email..">
+              <button type="submit" name="submit" value="submit" onclick="verificationInfo();"  class="btn btn-primary" id="info-register">INSCRIPTION</button>
+            </form>
           </div>
-
         </div>
       </div>
     </div>

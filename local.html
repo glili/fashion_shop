@@ -2,120 +2,67 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LaMode</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
-    <style>
-        .icon-menu {
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LaMode</title>
+  <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style_projet.css">
 </head>
 
-<body>
-
-
-
-    <div class="header">
-        <div class="header__main main-header">
-            <div class="main-header__container">
-                <div class="main-header__logo">Logo</div>
-                <div class="main-header__menu menu">
-                    <nav class="menu__body">
-                        <ul class="menu__list">
-                            <li class="menu__item"><a href="index.html" class="menu__link">Accueil</a></li>
-                            <li class="menu__item"><a href="produits.html" class="menu__link">Produits</a></li>
-                            <li class="menu__item"><a href="presentation.html" class="menu__link">Presentation</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">Local</a></li>
-                            <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a></li>
-                            <li class="menu__item"><a href="compte.html" class="menu__link">Compte</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                
-                <button type="button" class="icon-menu"><span></span></button>
-            </div>
-        </div>
-        <div class="header__bottom bottom-header">
-            <div class="bottom-header__container">
-                <div class="bottom-header__search search-header">
-                    <form action="#" class="search-header">
-                        <input type="text" autocomplete="off" name="chercher" data-error="Erreur" placeholder="Chercher"
-                            class="search-header__input">
-                        <button type="submit"><i class="bi bi-search"></i></button>
-                    </form>
-                </div>
-                <div class="bottom-header__activity activity-header">
-                    <a href="#" class="activity-header__favorite _icon-favorite"><i class="bi bi-heart-fill"></i></a>
-                    <div class="action-header__cart cart-header">
-                        <div class="cart-header__icon _icon-cart">
-                            <a href="#" class="cart-header__link"><i class="bi bi-cart-fill"></i></a>
-                            <span>0 $</span>
-                        </div>
-                        <div class="cart-header__body">
-                            <div class="cart-header__summ"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<body class="form-body">
+  <!-- navigation -->
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand"><img src="image/logo.webp" alt="Logo LaMode fashion store"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+          <li class="nav-item"><a href="produits.html" class="nav-link">Produits</a></li>
+          <li class="nav-item"><a href="presentation.html" class="nav-link">Presentation</a></li>
+          <li class="nav-item"><a href="#" class="nav-link active">Local</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="compte.html" class="nav-link">Compte</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="wrapper">
-        <div class="new_arrivals">
-
-        </div>
-        <div class="sales">
+  </nav>
+  <figure>
+    <div class="fixed-wrap">
+        <div id="fixed">
 
         </div>
     </div>
-    <div class="footer">
-        <div class="footer__container _container">
-            <div class="footer__body">
-                <div class="footer__menu menu-footer">
-                    <div class="menu-footer__column">
-                        <ul class="menu-footer__list">
-                            <li class="menu-footer__item"><a href="index.html" class="menu-footer__link">Accueil</a></li>
-                            <li class="menu-footer__item"><a href="produits.html" class="menu-footer__link">Produits</a>
-                            </li>
-                            <li class="menu-footer__item"><a href="presentation.html"
-                                    class="menu__link">Presentation</a>
-                            </li>
-                            <li class="menu-footer__item"><a href="#" class="menu-footer__link">Local</a></li>
-                            <li class="menu-footer__item"><a href="contact.html" class="menu-footer__link">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-account account-footer">
-                    <div class="account-footer__column">
-                        <ul class="account-footer__list">
-                            <li class="account-footer__item"><a href="compte.html"
-                                    class="account-footer__link">Compte</a></li>
-                           
-                            <li class="account-footer__item"><a href="#" class="account-footer__link">Panier</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer__subscribe subscribe">
-                    <div class="subscribe__title _footer-title">Inscrivez vous a notre infolettre</div> 
-                    <form  data-message="subscribe" data-text action="#" class="subscribe__form">
-                        <input type="text" autocomplete="off"  name="subscribe" data-error="Erreur" data-value="Entrez votreb email" class="input_request_email" >
-                        <button type="submit" class="subscribe__button _icon-send">Submit</button>
-                    </form>
-                </div>
-                <div class="footer__social social">
-                    <ul class="social__list">
-                        <li class="social__item"><a href="https://www.facebook.com" target="_blank" class="social__link"><i class="bi bi-facebook"></i></a></li>
-                        <li class="social__item"><a href="https://www.instagram.com" target="_blank" class="social__link"><i class="bi bi-instagram"></i></a></li>
-                        <li class="social__item"><a href="https://twitter.com" target="_blank" class="social__link"><i class="bi bi-twitter"></i></a></li>
-                    </ul>
-                </div>
-            </div>
+</figure> 
+
+  <div class="container padded text-center">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="contacts padded" id="contacts">
+          <h4>Contacts :</h4>
+          <div class="phone__number"><i class="bi bi-telephone-inbound-fill padded"></i>
+            +1 (123) 456 7890
+          </div>
+          <div class="address">
+            <p>3891 rue Saint-Denis, Montreal,<br>
+              QC, H2W 2M4 Canada</p>
+          </div>
         </div>
+      </div>
+      <div class="col-lg-4">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.5047039708516!2d-73.57604768486583!3d45.520048279101594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91bcb95193971%3A0x15b883e03ad59e31!2s3891%20Rue%20Saint-Denis%2C%20Montr%C3%A9al%2C%20QC%20H2W%202M4!5e0!3m2!1sen!2sca!4v1573611217866!5m2!1sen!2sca"
+          width="300" height="200" frameborder="0" style="border:0; margin-top:10px;" allowfullscreen=""></iframe>
+      </div>
     </div>
+  </div>
+
 
   <!-- footer -->
   <footer class="footer">
@@ -126,9 +73,9 @@
             <h2>La Mode</h2>
             <ul>
               <li><a href="index.html">Accueil</a></li>
-              <li><a href="#">Produits</a></li>
+              <li><a href="p">Produits</a></li>
               <li><a href="presentation.html">Presentation</a></li>
-              <li><a href="local.html">Local</a></li>
+              <li><a class="active" href="#">Local</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
@@ -142,12 +89,11 @@
           </div>
           <div class="inscription">
             <h2 class="text-center">Inscrivez vous a notre infolettre.</h2>
-            <div class="input">
-              <input type="text" placeholder="Entrez votre Email..">
-              <button id="inscription">INSCRIPTION</button>
-            </div>
+            <form class="input" action="index.php" method="post">
+              <input type="email"  id="email1" pattern="(^[a-z0-9]+)@([a-z0-9])+(\.)([a-z]{2,4})"  placeholder="Entrez votre Email..">
+              <button type="submit" name="submit" value="submit" onclick="verificationInfo();"  class="btn btn-primary" id="info-register">INSCRIPTION</button>
+            </form>
           </div>
-
         </div>
       </div>
     </div>
@@ -172,7 +118,3 @@
 </body>
 
 </html>
-
-
-
-
