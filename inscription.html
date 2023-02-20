@@ -41,7 +41,7 @@
       <div class="col-lg-6">
         <div id="form-inscription">
           <h1 class="text-center">Creer votre compte:</h1>
-          <form class="form-group" action="index.php" method="post">
+          <form class="form-group" action="index.php" method="post" name="form-inscription" onsubmit = "return validationInfo('form-inscription');">
             <div class="row">
               <div class="col-lg-6">
                 <label for="fname">Prenom</label>
@@ -52,7 +52,7 @@
                 <input type="text" name="lname" id="lname" class="form-control" placeholder="Entrez votre nom">
               </div>
               <label for="email">Email</label>
-              <input type="email" name="email" id="email" class="form-control" pattern="(^[a-z0-9]+)@([a-z0-9])+(\.)([a-z]{2,4})"  placeholder="Enntrez votre email">
+              <input type="email" name="email" id="email" class="form-control"  placeholder="Enntrez votre email">
               <div class="row">
                 <div class="col-lg-6">
                   <label for="password">Mot de passe</label>
@@ -75,7 +75,7 @@
                 <label for=""><input type="checkbox"> Voulais vous inscrire a notre infolettre</label>
               </div>
               
-              <button type="submit" name="submit" value="submit" onclick="verificationInfo();"  id="submit1" class="btn btn-primary">Creer compte</button>
+              <button type="submit" name="submit" value="submit"  class="btn btn-primary">Creer compte</button>
               <div class="col-lg-6">
                 <p class="login">Vous avez deja compte? <a href="compte.html"> Connexion</a></p>
               </div>
@@ -113,9 +113,9 @@
           </div>
           <div class="inscription">
             <h2 class="text-center">Inscrivez vous a notre infolettre.</h2>
-            <form class="input" action="index.php" method="post">
-              <input type="email"  id="email1" pattern="(^[a-z0-9]+)@([a-z0-9])+(\.)([a-z]{2,4})"  placeholder="Entrez votre Email..">
-              <button type="submit" name="submit" value="submit" onclick="verificationInfo();"  class="btn btn-primary" id="info-register">INSCRIPTION</button>
+            <form class="input" action="index.php" method="post" name="form-footer" onsubmit = "return validationInfo('form-footer');">
+              <input type="email"  id="email"  placeholder="Entrez votre Email..">
+              <button type="submit" name="submit" value="submit"  class="btn btn-primary" id="info-register">INSCRIPTION</button>
             </form>
           </div>
         </div>

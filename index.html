@@ -262,9 +262,9 @@
           </div>
           <div class="inscription">
             <h2 class="text-center">Inscrivez vous a notre infolettre.</h2>
-            <form class="input" action="index.php" method="post">
-              <input type="email"  id="email1" pattern="(^[a-z0-9]+)@([a-z0-9])+(\.)([a-z]{2,4})"  placeholder="Entrez votre Email..">
-              <button type="submit" name="submit" value="submit" onclick="verificationInfo();"  class="btn" style="background-color: blue;" id="info-register">INSCRIPTION</button>
+            <form class="input" action="index.php" method="post" name="form-footer" onsubmit = "return validationInfo('form-footer');">
+              <input type="email"  id="email"   placeholder="Entrez votre Email..">
+              <button type="submit" name="submit" value="submit" class="btn btn-primary"  id="info-register">INSCRIPTION</button>
             </form>
           </div>
         </div>
