@@ -10,14 +10,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style_projet.css">
+  <link rel="stylesheet" href="../css/style_projet.css">
 </head>
 
 <body onload="pageLoaded();">
   <!-- navigation -->
-  <nav class="navbar navbar-expand-md navbar-light">
+  <nav class="navbar navbar-expand-md navbar-light" id="nav">
     <div class="container-fluid">
-      <a href="#" class="navbar-brand"><img src="image/logo.webp" alt="Logo LaMode fashion store" onmouseover="imageHovered();"></a>
+      <a href="#" class="navbar-brand"><img src="image/logo.webp" alt="Logo LaMode fashion store"
+          onmouseover="imageHovered();"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,10 +31,6 @@
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
           <li class="nav-item"><a href="compte.html" class="nav-link">Compte</a></li>
         </ul>
-        <!-- <form class="form-search d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn" type="submit"><i class="bi bi-search"></i></button>
-        </form> -->
       </div>
     </div>
   </nav>
@@ -41,8 +38,8 @@
 
   <!-- Carousel wrapper -->
   <!-- <div id="carouselResponsive" class="carousel slide " data-ride="carousel"> -->
-    <!-- Slides -->
-    <!-- <div class="carousel-inner mb-5 shadow-sm rounded">
+  <!-- Slides -->
+  <!-- <div class="carousel-inner mb-5 shadow-sm rounded">
       <div class="carousel-item active">
         <img src="image/11slide.webp" class="d-block w-100" alt="..." />
       </div>
@@ -53,19 +50,19 @@
         <img src="image/13slide.webp" class="d-block w-100" alt="..." />
       </div>
     </div> -->
-    <!-- Slides -->
+  <!-- Slides -->
 
-    <!-- Controls -->
-    <!-- <a class="carousel-control-prev" href="#carouselResponsive" role="button" data-slide="prev">
+  <!-- Controls -->
+  <!-- <a class="carousel-control-prev" href="#carouselResponsive" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     </a>
     <a class="carousel-control-next" href="#carouselResponsive" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
     </a> -->
-    <!-- Controls -->
+  <!-- Controls -->
 
-    <!-- Thumbnails -->
-    <!-- <ol class="carousel-indicators list-inline">
+  <!-- Thumbnails -->
+  <!-- <ol class="carousel-indicators list-inline">
       <li class="list-inline-item active">
         <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#carouselResponsive">
           <img class="d-block w-100 shadow-sm rounded" src="image/11_sm.webp" class="img-fluid">
@@ -84,28 +81,28 @@
         </a>
       </li>
     </ol> -->
-    <!-- Thumbnails -->
+  <!-- Thumbnails -->
   <!-- </div> -->
 
-   <!-- slider container JS-->
-<section aria-label="Carousel photos">
-  <div id="slider" class="carousel">
-    <button id="previous" class="carousel-button prev">&#8656</button>
-    <button id="next" class="carousel-button next">&#8658</button>
-    <ul data-slides>
-      <li class="slide"><img src="image/11slide.webp" alt="Slide img1"></li>
-      <li class="slide"><img src="image/12slide.webp" alt="Slide img2"></li>
-      <li class="slide"><img src="image/13slide.webp" alt="Slide img3"></li>
-    </ul>
-  </div>
-</section>
+  <!-- slider container JS-->
+  <section aria-label="Carousel photos">
+    <div id="slider" class="carousel">
+      <button id="previous" class="carousel-button prev">&#8656</button>
+      <button id="next" class="carousel-button next">&#8658</button>
+      <ul data-slides>
+        <li class="slide"><img src="image/11slide.webp" alt="Slide img1"></li>
+        <li class="slide"><img src="image/12slide.webp" alt="Slide img2"></li>
+        <li class="slide"><img src="image/13slide.webp" alt="Slide img3"></li>
+      </ul>
+    </div>
+  </section>
 
 
   <!-- cards produit -->
   <div class="galery">
     <div class="container padded cart">
       <h1 class=" col-12 text-center news">Nouveaute</h1>
-      <div class="row text-center " >
+      <div class="row text-center ">
         <div class="col-sm-6 col-md-3">
           <div class="card">
             <img src="image/red_dress.webp" alt="Robe rouge de cocleil femme">
@@ -209,43 +206,43 @@
       </div>
     </div>
   </div>
-    <!-- other cards -->
-    <div class="container" id="rabais-cards">
-      <div class="row">
-        <div class="col-md-6 py-3 py-md-0">
-          <div class="card">
-            <img src="image/orange_blouse.webp" alt="Vetements d'automn femme">
-            <div class="card-img-overlay">
-              <h3>Femme</h3>
-              <p>Up to 50$ Off</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 py-3 py-md-0">
-          <div class="card">
-            <img src="image/manteau.webp" alt="Vetments d'automn homme">
-            <div class="card-img-overlay">
-              <h3>Homme</h3>
-              <p>Up to 50$ Off</p>
-            </div>
+  <!-- other cards -->
+  <div class="container" id="rabais-cards">
+    <div class="row">
+      <div class="col-md-6 py-3 py-md-0">
+        <div class="card">
+          <img src="image/orange_blouse.webp" alt="Vetements d'automn femme">
+          <div class="card-img-overlay">
+            <h3>Femme</h3>
+            <p>Up to 50$ Off</p>
           </div>
         </div>
       </div>
-      <div class="achats col-md-12 py-3 py-md-0">
-        <button onclick="buttonClicked()" id="achat">Acheter maintenant</button>
+      <div class="col-md-6 py-3 py-md-0">
+        <div class="card">
+          <img src="image/manteau.webp" alt="Vetments d'automn homme">
+          <div class="card-img-overlay">
+            <h3>Homme</h3>
+            <p>Up to 50$ Off</p>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- other cards -->
+    <div class="achats col-md-12 py-3 py-md-0">
+      <button onclick="buttonClicked()" id="achat">Acheter maintenant</button>
+    </div>
+  </div>
+  <!-- other cards -->
 
   <!-- footer -->
-  <footer class="footer">
+  <footer class="footer" id="foot">
     <div class="footer-top">
       <div class="container">
         <div class="row">
           <div class="footer-links col-lg-3 col-md-6 ">
             <h2>La Mode</h2>
             <ul>
-              <li><a  class="active" href="#">Accueil</a></li>
+              <li><a class="active" href="#">Accueil</a></li>
               <li><a href="produits.html">Produits</a></li>
               <li><a href="presentation.html">Presentation</a></li>
               <li><a href="local.html">Local</a></li>
@@ -262,9 +259,11 @@
           </div>
           <div class="inscription">
             <h2 class="text-center">Inscrivez vous a notre infolettre.</h2>
-            <form class="input" action="index.php" method="post" name="form-footer" onsubmit = "return validationInfo('form-footer');">
-              <input type="email"  id="email"   placeholder="Entrez votre Email..">
-              <button type="submit" name="submit" value="submit" class="btn btn-primary"  id="info-register">INSCRIPTION</button>
+            <form class="input" action="index.php" method="post" name="form-footer"
+              onsubmit="return validationInfo('form-footer');">
+              <input type="email" id="emailf" placeholder="Entrez votre Email..">
+              <button type="submit" name="submit" value="submit" class="btn btn-primary"
+                id="info-register">INSCRIPTION</button>
             </form>
           </div>
         </div>
@@ -278,7 +277,7 @@
   <!-- footer -->
 
 
-  <script src="script/script_projet.js"></script>
+  <script src="../script/script_projet.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>

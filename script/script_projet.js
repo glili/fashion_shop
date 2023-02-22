@@ -29,31 +29,31 @@ function slideLeft() {
   current--;
 }
 
-// // Bouton précédent
-// document.querySelector("#previous").addEventListener("click", function () {
-//   if (current === 0) {
-//     current = sliderImages.length;
-//   }
-//   slideLeft();
-// });
+// Bouton précédent
+document.querySelector("#previous").addEventListener("click", function () {
+  if (current === 0) {
+    current = sliderImages.length;
+  }
+  slideLeft();
+});
 
-// // Bouton suivant
-// document.querySelector("#next").addEventListener("click", function () {
-//   if (current === sliderImages.length - 1) {
-//     current = -1;
-//   }
-//   slideRight();
-// });
+// Bouton suivant
+document.querySelector("#next").addEventListener("click", function () {
+  if (current === sliderImages.length - 1) {
+    current = -1;
+  }
+  slideRight();
+});
 
-// // Défilement automatique toutes les 2 secondes
-// setInterval(function () {
-//   if (current === sliderImages.length - 1) {
-//     current = -1;
-//   }
-//   slideRight();
-// }, 2000);
+// Défilement automatique toutes les 2 secondes
+setInterval(function () {
+  if (current === sliderImages.length - 1) {
+    current = -1;
+  }
+  slideRight();
+}, 2000);
 
-// startSlide();
+startSlide();
 
 
 
@@ -138,7 +138,7 @@ function validationInfo(name) {
       }
     }
   } else if (name == "form-footer") {
-    var email = document.forms["form-footer"]["email"].value;
+    var email = document.forms["form-footer"]["emailf"].value;
     if (email === "") {
       alert("Le champs couriel ne peut pas etre  vide");
       return false;
@@ -162,15 +162,16 @@ function validationInfo(name) {
 
 
 
-// var btns = document.getElementsByTagName("button");
-// var navs = document.getElementsByTagName("nav");
-// var foots = document.getElementsByTagName("footer");
-// for (let i = 0; i < btns.length; i++) { 
-//   btns[i].addEventListener("mouseover", ()=>btns[i].style.backgroundColor="green");
-//   foots[i].addEventListener("mouseover", ()=>foots[i].style.backgroundColor="gray");
-//   navs[i].addEventListener("mouseover", ()=>navs[i].style.backgroundColor="gray");
-// };
+var btns = document.getElementsByTagName("button");
+var nav = document.getElementById("nav");
+var foot = document.getElementById("foot");
+console.log(foot);
+for (let i = 0; i < btns.length; i++) { 
+  btns[i].addEventListener("mouseover", ()=>btns[i].style.backgroundColor="purple");
+  foot.addEventListener("mouseover", ()=>foot.style.backgroundColor="gray");
+  nav.addEventListener("mouseover", ()=>nav.style.backgroundColor="gray");
+};
 
-// function pageLoaded() { alert("La page est chargée !"); }
-// function imageHovered() { alert("L'image est survolée !"); }
-// function buttonClicked() { alert("Le bouton est cliqué !"); }
+function pageLoaded() { alert("La page est chargée !"); }
+function imageHovered() { alert("L'image est survolée !"); }
+function buttonClicked() { alert("Le bouton est cliqué !"); }
