@@ -31,6 +31,7 @@ ul {
 }
 
 table{
+    width: 100vw;
     font-family:'Sans Comic Sans', sans-serif;
     font-size: 80%;
     text-align: center;
@@ -38,6 +39,7 @@ table{
     border: 2px solid gray;
     background-color: #fff;
     border-collapse: collapse;
+    
 }
 
 th, td{

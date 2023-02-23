@@ -12,7 +12,7 @@ class Produit {
         private $quantite;
 
         // Constructor
-        public function __construct($code, $title,$desc,$marque,$url,$prix,$qte=0){
+        public function __construct($code, $title,$desc,$marque,$url,$prix,$qte){
                 $this->code=$code;
                 $this->title=$title;
                 $this->description=$desc;

@@ -17,16 +17,3 @@
 	unset($_SESSION['userConnected']);
 
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<title>Démos 5E</title>
-<meta charset="utf-8" />
-<link rel="stylesheet" type="text/css" href="../css/style_projet.css" />
-
-</head>
-<body >
-	<h1> <?php  echo $nomUtilisateur;?> : Vous êtes maintenant déconnecté</h1>
-	<h3><a href="connexion.php">Se connecter</a></h3>
-</body>
-</html>
