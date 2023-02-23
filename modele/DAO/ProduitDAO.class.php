@@ -28,7 +28,7 @@ class ProduitDAO implements DAO
 
 		$leProduit = null;
 		//PDOStatement avec des paramètres SQL	
-		$query = $connexion->prepare("SELECT * FROM produits WHERE code=?");
+		$query = $connexion->prepare("SELECT * FROM Produits WHERE code=?");
 
 		$query->execute(array($key));
 		// créer l’instance du Produit
@@ -55,7 +55,7 @@ class ProduitDAO implements DAO
 	
 			$liste = array();
 			// PDOStatement avec des paramètres SQL	
-			$query = $connexion->prepare("SELECT * FROM produits ");
+			$query = $connexion->prepare("SELECT * FROM Produits ");
 	
 			$query->execute();
 	
@@ -81,7 +81,7 @@ class ProduitDAO implements DAO
 
 		$liste = array();
 		// PDOStatement avec des paramètres SQL	
-		$query = $connexion->prepare("SELECT * FROM produits " . $filtre);
+		$query = $connexion->prepare("SELECT * FROM Produits " . $filtre);
 
 		$query->execute();
 
@@ -104,7 +104,7 @@ class ProduitDAO implements DAO
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
 
-		$commandeSQL = "INSERT INTO produits (code, title, description,marque, url_photo, prix, quantite)";
+		$commandeSQL = "INSERT INTO Produits (code, title, description,marque, url_photo, prix, quantite)";
 		$commandeSQL .= "VALUES(?,?,?,?,?,?,?)";
 		$tab = array($unProduit->get_code(), $unProduit->get_description(), $unProduit->get_url_photo(), $unProduit->get_prix(), $unProduit->get_quantite());
 		$requete = $connexion->prepare($commandeSQL);
@@ -120,7 +120,7 @@ class ProduitDAO implements DAO
 		} catch (Exception $e) {
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
-		$commandeSQL = "UPDATE produits (code, title, description,marque, url_photo, prix, quantite)";
+		$commandeSQL = "UPDATE Produits (code, title, description,marque, url_photo, prix, quantite)";
 		$query = $connexion->prepare($commandeSQL);
 		$tab = array($unProduit->get_code(), $unProduit->get_description(), $unProduit->get_url_photo(), $unProduit->get_prix(), $unProduit->get_quantite());
 		return	$query->execute($tab);
@@ -133,7 +133,7 @@ class ProduitDAO implements DAO
 		} catch (Exception $e) {
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
-		$commandeSQL = "DELETE FROM produits WHERE code=?";
+		$commandeSQL = "DELETE FROM Produits WHERE code=?";
 		$query = $connexion->prepare($commandeSQL);
 		return	$query->execute([$unProduit->getCode()]);
 	}

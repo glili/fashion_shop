@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,18 +21,18 @@
   <!-- navigation -->
   <nav class="navbar navbar-expand-md navbar-light">
     <div class="container-fluid">
-      <a href="#" class="navbar-brand"><img src="image/logo.webp" alt="Logo LaMode fashion store"></a>
+      <a href="#" class="navbar-brand"><img src="../image/logo.webp" alt="Logo LaMode fashion store"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+          <li class="nav-item"><a href="../index.php" class="nav-link">Accueil</a></li>
           <li class="nav-item"><a href="#" class="nav-link active">Produits</a></li>
-          <li class="nav-item"><a href="presentation.html" class="nav-link">Presentation</a></li>
-          <li class="nav-item"><a href="local.html" class="nav-link">Local</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item"><a href="compte.html" class="nav-link">Compte</a></li>
+          <li class="nav-item"><a href="presentation.php" class="nav-link">Presentation</a></li>
+          <li class="nav-item"><a href="local.php" class="nav-link">Local</a></li>
+          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="compte.php" class="nav-link">Compte</a></li>
         </ul>
       </div>
     </div>
@@ -44,7 +48,7 @@
         </p>
       </div>
       <div class=" offset-lg-2 col-lg-4">
-        <img src="image/clothes-shopping.gif" alt="main banner">
+        <img src="../image/clothes-shopping.gif" alt="main banner">
       </div>
 
     </div>
@@ -67,7 +71,7 @@
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="card">
-            <img src="image/orange_blouse.webp" alt="Blouse orange femme">
+            <img src="../image/orange_blouse.webp" alt="Blouse orange femme">
             <div class="card-body">
               <h3 class="text-center">Blouse femme <br>Zalando</h3>
               <p class="text-center">Lorem ipsum dolor sit amet.</p>
@@ -77,7 +81,7 @@
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="card">
-            <img src="image/white_blouse.webp" alt="Blouse blanche femme">
+            <img src="../image/white_blouse.webp" alt="Blouse blanche femme">
             <div class="card-body">
               <h3 class="text-center">Blouse femme<br>Cartier</h3>
               <p class="text-center">Lorem ipsum dolor sit amet.</p>
@@ -87,7 +91,7 @@
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="card">
-            <img src="image/shirt.webp" alt="Chemise homme">
+            <img src="../image/shirt.webp" alt="Chemise homme">
             <div class="card-body">
               <h3 class="text-center">Chemise homme<br>Zarra</h3>
               <p class="text-center">Lorem ipsum dolor sit amet.</p>
@@ -97,7 +101,7 @@
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="card">
-            <img src="image/jeans_men.webp" alt="Jeans homme">
+            <img src="../image/jeans_men.webp" alt="Jeans homme">
             <div class="card-body">
               <h3 class="text-center">Jeans homme<br>Cartier</h3>
               <p class="text-center">Lorem ipsum dolor sit amet.</p>
@@ -107,7 +111,7 @@
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="card">
-            <img src="image/jeans.webp" alt="Jeans femme">
+            <img src="../image/jeans.webp" alt="Jeans femme">
             <div class="card-body">
               <h3 class="text-center">Jeans femme<br>Zalando</h3>
               <p class="text-center">Lorem ipsum dolor sit amet.</p>
@@ -117,7 +121,7 @@
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="card">
-            <img src="image/red_blouse.webp" alt="Blouse rouge femme">
+            <img src="../image/red_blouse.webp" alt="Blouse rouge femme">
             <div class="card-body">
               <h3 class="text-center">Blouse femme<br>Zarra</h3>
               <p class="text-center">Lorem ipsum dolor sit amet.</p>
@@ -127,7 +131,7 @@
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="card">
-            <img src="image/manteau.webp" alt="Veste homme">
+            <img src="../image/manteau.webp" alt="Veste homme">
             <div class="card-body">
               <h3 class="text-center">Veste homme<br>Zarra</h3>
               <p class="text-center">Lorem ipsum dolor sit amet.</p>
@@ -137,7 +141,7 @@
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="card">
-            <img src="image/scarf.webp" alt="Foulard">
+            <img src="../image/scarf.webp" alt="Foulard">
             <div class="card-body">
               <h3 class="text-center">Foulard<br>Zarra</h3>
               <p class="text-center">Lorem ipsum dolor sit amet.</p>
@@ -147,7 +151,7 @@
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="card">
-            <img src="image/cap.webp" alt="Chapeau">
+            <img src="../image/cap.webp" alt="Chapeau">
             <div class="card-body">
               <h3 class="text-center">Chapeau<br>Zarra</h3>
               <p class="text-center">Lorem ipsum dolor sit amet.</p>
@@ -168,11 +172,11 @@
           <div class="footer-links col-lg-3 col-md-6 ">
             <h2>La Mode</h2>
             <ul>
-              <li><a href="index.html">Accueil</a></li>
+              <li><a href="../index.php">Accueil</a></li>
               <li><a class="active" href="#">Produits</a></li>
-              <li><a href="presentation.html">Presentation</a></li>
-              <li><a href="local.html">Local</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="presentation.php">Presentation</a></li>
+              <li><a href="local.php">Local</a></li>
+              <li><a href="contact.php">Contact</a></li>
             </ul>
           </div>
           <div class="social-links col-lg-3 col-md-6">

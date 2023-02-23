@@ -24,7 +24,7 @@ CREATE TABLE Utilisateurs (
   mot_passe   VARCHAR(255),
   email   VARCHAR(255),
   genre   char,
-  infoletre boolean,
+  infolettre boolean,
   administrateur boolean,
   CONSTRAINT user_pk PRIMARY KEY (id)
 );

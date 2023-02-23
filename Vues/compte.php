@@ -1,3 +1,16 @@
+<?php
+if (defined("mainFolder") == false) {
+	define("mainFolder", $_SERVER['DOCUMENT_ROOT']."/fashion_shop/");
+}
+
+$mainFolder = $_SERVER['DOCUMENT_ROOT']."/fashion_shop/";
+
+include_once($mainFolder."modele/utilisateur.class.php");
+include_once($mainFolder."modele/DAO/UtilisateurDAO.class.php");
+
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,7 +72,7 @@
       <div class="col-lg-6">
         <div id="form-inscription">
           <h1 class="text-center">Acceder votre compte:</h1>
-          <form class="form-group" action="index.php" method="post" name="form-compte"
+          <form class="form-group" action="produits.php" method="post" name="form-compte"
             onsubmit="return(validationInfo('form-compte'));">
             <div class="row">
               <div class="col-lg-6">
@@ -83,6 +96,30 @@
     </div>
   </div>
 
+  <?php
+
+if (isset($_POST['email']) and isset($_POST['password'])) {
+
+  $key = $_POST['email'];
+  $password = $_POST['password'];
+	$user = UserDAO::display($_POST['$key']);
+	// check user and password
+	if ($user != null) {
+		if ($user->checkPassword($_POST['password'])) {
+			// on créer la variable de session userConnected
+			$_SESSION['userConnected'] = $_POST['email'];
+			// On redirige vers la page gestionProduit apres connection
+			header("Location: produits.php");
+		}
+	}
+}
+// Sinon, si la session est active, on redirige aussi vers la page privée
+elseif (isset($_SESSION['userConnected'])) {
+	header("Location: produits.php");
+}
+
+
+?>
   <!-- footer -->
   <footer class="footer">
     <div class="footer-top">

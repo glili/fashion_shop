@@ -89,6 +89,7 @@ include_once($mainFolder."modele/DAO/UtilisateurDAO.class.php");
               </div>
 
               <button type="submit" name="submit" value="submit" class="btn btn-primary">Creer compte</button>
+              
               <div class="col-lg-6">
                 <p class="login">Vous avez deja compte? <a href="compte.php"> Connexion</a></p>
               </div>
@@ -125,11 +126,8 @@ if(isset ($_POST['fname']) && isset ($_POST['lname']) && isset($_POST['email']) 
 
   $personne = new UserDAO();
   $user = new Utilisateur($lname, $fname, $email, $password, $genre, $checkbox, $admin);
-
   $personne->insert($user);
-  echo $user;
-
-  $user=UserDAO::display($lname);
+  
 }
 
 ?>

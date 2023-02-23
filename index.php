@@ -9,6 +9,9 @@ include_once(mainFolder."modele/produits.class.php");
 include_once(mainFolder."modele/DAO/ProduitDAO.class.php");
 
 // include_once 'Vues/header.php';
+
+session_start();
+	
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +40,15 @@ include_once(mainFolder."modele/DAO/ProduitDAO.class.php");
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="#" class="nav-link active">Accueil</a></li>
-                <li class="nav-item"><a href="Vues/compte.php" class="nav-link">Produits</a></li>
+        <?php 
+
+                // Si l'ulisateurConnecte n'exsite pas, alors on redirige vers la page de connexion
+	    if(!ISSET($_SESSION['userConnected'])){
+            echo ' <li class="nav-item"><a href="Vues/compte.php" class="nav-link">Produits</a></li>';
+	    } else{
+        echo "<li class='nav-item'><a href='Vues/produits.php' class='nav-link'>Produits</a></li>";
+        }
+                ?>
                 <li class="nav-item"><a href="Vues/presentation.php" class="nav-link">Presentation</a></li>
                 <li class="nav-item"><a href="Vues/local.php" class="nav-link">Local</a></li>
                 <li class="nav-item"><a href="Vues/contact.php" class="nav-link">Contact</a></li>
@@ -97,14 +108,23 @@ include_once(mainFolder."modele/DAO/ProduitDAO.class.php");
 <!-- </div> -->
 
 <!-- slider container JS-->
+<?php
+$prod= new ProduitDAO();
+$title = 'where title like "image%"';
+$prod=ProduitDAO::displaySorted($title);
+?>
+
 <section aria-label="Carousel photos">
     <div id="slider" class="carousel">
         <button id="previous" class="carousel-button prev">&#8656;</button>
         <button id="next" class="carousel-button next">&#8658;</button>
         <ul data-slides>
-            <li class="slide"><img src="image/11slide.webp" alt="Slide img1"></li>
-            <li class="slide"><img src="image/12slide.webp" alt="Slide img2"></li>
-            <li class="slide"><img src="image/13slide.webp" alt="Slide img3"></li>
+            
+<?php
+foreach ($prod as $value) {
+    echo '<li class="slide"><img src="'.$value->getUrlPhoto().'" alt="Slide img3"></li>';
+}
+?>
         </ul>
     </div>
 </section>
