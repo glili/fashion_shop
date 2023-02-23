@@ -11,7 +11,7 @@ class Produit {
         private $prix;
         private $quantite;
 
-        // Constructeur
+        // Constructor
         public function __construct($code, $title,$desc,$marque,$url,$prix,$qte=0){
                 $this->code=$code;
                 $this->title=$title;
@@ -22,7 +22,7 @@ class Produit {
                 $this->quantite=$qte;
         }
 
-        // Accesseurs et mutateurs
+        // Getters setters
         public function getCode() {return $this->code;}
         public function getTitle() {return $this->title;}
         public function getDescription() {return $this->description;}
@@ -38,19 +38,19 @@ class Produit {
         public function setUrlPhoto($valeur) {$this->urlPhoto=$valeur;}
         public function setPrix($valeur) {$this->prix=$valeur;}
 
-        // Autres méthodes
-        public function ajouterAuStock($quantiteAjoutee) {
+        // methodes
+        public function addstock($quantiteAjoutee) {
                 $this->quantite+=$quantiteAjoutee;
         }
-        public function enleverDuStock($quantiteEnlevee) {
+        public function deleteStock($quantiteEnlevee) {
                 $this->quantite-=$quantiteEnlevee;
         }
-        public function changer_prix_pct($pourcentage) {
+        public function change_price($pourcentage) {
                 $changement=$pourcentage/100.0*$this->prix;
                 $this->prix+=$changement;
         }
 
-        // Affichage
+        // Display
         public function __toString(){
                 $message="[#".$this->code."] ".$this->title. ", ".$this->description." - ".$this->marque;
                 $message.=" @".round($this->prix,2)."$ (".$this->quantite." en stock)";

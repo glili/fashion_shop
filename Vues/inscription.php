@@ -1,3 +1,15 @@
+<?php
+if (defined("mainFolder") == false) {
+	define("mainFolder", $_SERVER['DOCUMENT_ROOT']."/fashion_shop/");
+}
+
+$mainFolder = $_SERVER['DOCUMENT_ROOT']."/fashion_shop/";
+
+include_once($mainFolder."modele/utilisateur.class.php");
+include_once($mainFolder."modele/DAO/UtilisateurDAO.class.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,18 +29,18 @@
   <!-- navigation -->
   <nav class="navbar navbar-expand-md navbar-light">
     <div class="container-fluid">
-      <a href="#" class="navbar-brand"><img src="image/logo.webp" alt="Logo LaMode fashion store"></a>
+      <a href="#" class="navbar-brand"><img src="../image/logo.webp" alt="Logo LaMode fashion store"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
-          <li class="nav-item"><a href="produits.html" class="nav-link">Produits</a></li>
-          <li class="nav-item"><a href="presentation.html" class="nav-link">Presentation</a></li>
-          <li class="nav-item"><a href="local.html" class="nav-link">Local</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item"><a href="compte.html" class="nav-link active">Compte</a></li>
+          <li class="nav-item"><a href="../index.php" class="nav-link">Accueil</a></li>
+          <li class="nav-item"><a href="compte.php" class="nav-link">Produits</a></li>
+          <li class="nav-item"><a href="presentation.php" class="nav-link">Presentation</a></li>
+          <li class="nav-item"><a href="local.php" class="nav-link">Local</a></li>
+          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="compte.php" class="nav-link active">Compte</a></li>
         </ul>
       </div>
     </div>
@@ -41,7 +53,7 @@
       <div class="col-lg-6">
         <div id="form-inscription">
           <h1 class="text-center">Creer votre compte:</h1>
-          <form class="form-group" action="index.php" method="post" name="form-inscription"
+          <form class="form-group" action="inscription.php" method="post" name="form-inscription"
             onsubmit="return validationInfo('form-inscription');">
             <div class="row">
               <div class="col-lg-6">
@@ -73,12 +85,12 @@
                 <option value="others">Others</option>
               </select>
               <div class="checkbox col-lg-8">
-                <label for=""><input type="checkbox"> Voulais vous inscrire a notre infolettre</label>
+                <label><input name ="checkbox" type="checkbox"> Voulais vous inscrire a notre infolettre</label>
               </div>
 
               <button type="submit" name="submit" value="submit" class="btn btn-primary">Creer compte</button>
               <div class="col-lg-6">
-                <p class="login">Vous avez deja compte? <a href="compte.html"> Connexion</a></p>
+                <p class="login">Vous avez deja compte? <a href="compte.php"> Connexion</a></p>
               </div>
             </div>
           </form>
@@ -87,8 +99,40 @@
       <div class="col-lg-3"></div>
     </div>
   </div>
+<?php
 
 
+if(isset ($_POST['fname']) && isset ($_POST['lname']) && isset($_POST['email']) && isset ($_POST['password']) && isset ($_POST['gender']) && isset ($_POST['checkbox']) ){
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+  $genre = $_POST['gender'];
+  if( $_POST['gender']=== "male"){
+    $genre = "M";
+  }else if( $_POST['gender']=== "female"){
+    $genre= "F";
+  }else{
+    $genre="O";
+  }
+
+  $checkbox = 0;
+  if ($_POST['checkbox'] == "on"){
+    $checkbox = 1;
+  }
+
+  $admin=0;
+
+  $personne = new UserDAO();
+  $user = new Utilisateur($lname, $fname, $email, $password, $genre, $checkbox, $admin);
+
+  $personne->insert($user);
+  echo $user;
+
+  $user=UserDAO::display($lname);
+}
+
+?>
   <!-- footer -->
   <footer class="footer">
     <div class="footer-top">
@@ -97,11 +141,11 @@
           <div class="footer-links col-lg-3 col-md-6 ">
             <h2>La Mode</h2>
             <ul>
-              <li><a href="index.html">Accueil</a></li>
-              <li><a href="produits.html">Produits</a></li>
-              <li><a href="presentation.html">Presentation</a></li>
-              <li><a href="local.html">Local</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="../index.php">Accueil</a></li>
+              <li><a href="compte.php">Produits</a></li>
+              <li><a href="presentation.php">Presentation</a></li>
+              <li><a href="local.php">Local</a></li>
+              <li><a href="contact.php">Contact</a></li>
             </ul>
           </div>
           <div class="social-links col-lg-3 col-md-6">

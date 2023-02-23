@@ -162,16 +162,16 @@ function validationInfo(name) {
 
 
 
-var btns = document.getElementsByTagName("button");
-var nav = document.getElementById("nav");
-var foot = document.getElementById("foot");
-console.log(foot);
-for (let i = 0; i < btns.length; i++) { 
-  btns[i].addEventListener("mouseover", ()=>btns[i].style.backgroundColor="purple");
-  foot.addEventListener("mouseover", ()=>foot.style.backgroundColor="gray");
-  nav.addEventListener("mouseover", ()=>nav.style.backgroundColor="gray");
-};
+// var btns = document.getElementsByTagName("button");
+// var nav = document.getElementById("nav");
+// var foot = document.getElementById("foot");
+// console.log(foot);
+// for (let i = 0; i < btns.length; i++) { 
+//   btns[i].addEventListener("mouseover", ()=>btns[i].style.backgroundColor="purple");
+//   foot.addEventListener("mouseover", ()=>foot.style.backgroundColor="gray");
+//   nav.addEventListener("mouseover", ()=>nav.style.backgroundColor="gray");
+// };
 
-function pageLoaded() { alert("La page est chargée !"); }
-function imageHovered() { alert("L'image est survolée !"); }
-function buttonClicked() { alert("Le bouton est cliqué !"); }
+// function pageLoaded() { alert("La page est chargée !"); }
+// function imageHovered() { alert("L'image est survolée !"); }
+// function buttonClicked() { alert("Le bouton est cliqué !"); }

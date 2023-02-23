@@ -1,5 +1,6 @@
-<?php	
-	interface ConfigBD
+<?php
+
+	interface ConfigDB
 	{	
 		const BD_HOTE = "127.0.0.1";
 		const BD_UTILISATEUR = "root";

@@ -17,18 +17,18 @@
   <!-- navigation -->
   <nav class="navbar navbar-expand-md navbar-light">
     <div class="container-fluid">
-      <a href="#" class="navbar-brand"><img src="image/logo.webp" alt="Logo LaMode fashion store"></a>
+      <a href="#" class="navbar-brand"><img src="../image/logo.webp" alt="Logo LaMode fashion store"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
-          <li class="nav-item"><a href="produits.html" class="nav-link">Produits</a></li>
-          <li class="nav-item"><a href="presentation.html" class="nav-link">Presentation</a></li>
+          <li class="nav-item"><a href="../index.php" class="nav-link">Accueil</a></li>
+          <li class="nav-item"><a href="compte.php" class="nav-link">Produits</a></li>
+          <li class="nav-item"><a href="presentation.php" class="nav-link">Presentation</a></li>
           <li class="nav-item"><a href="#" class="nav-link active">Local</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item"><a href="compte.html" class="nav-link">Compte</a></li>
+          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="compte.php" class="nav-link">Compte</a></li>
         </ul>
       </div>
     </div>
@@ -47,7 +47,7 @@
         <div class="contacts padded" id="contacts">
           <h4>Contacts :</h4>
           <div class="phone__number"><i class="bi bi-telephone-inbound-fill padded"></i>
-            +1 (123) 456 7890
+          <a href="tel:+1234567890">+1 (123) 456 7890</a>
           </div>
           <div class="address">
             <p>3891 rue Saint-Denis, Montreal,<br>
@@ -58,7 +58,7 @@
       <div class="col-lg-4">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.5047039708516!2d-73.57604768486583!3d45.520048279101594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91bcb95193971%3A0x15b883e03ad59e31!2s3891%20Rue%20Saint-Denis%2C%20Montr%C3%A9al%2C%20QC%20H2W%202M4!5e0!3m2!1sen!2sca!4v1573611217866!5m2!1sen!2sca"
-          width="300" height="200" frameborder="0" style="border:0; margin-top:10px;" allowfullscreen=""></iframe>
+          width="300" height="200" style="border:0; margin-top:10px;" allowfullscreen=""></iframe>
       </div>
     </div>
   </div>
@@ -72,11 +72,11 @@
           <div class="footer-links col-lg-3 col-md-6 ">
             <h2>La Mode</h2>
             <ul>
-              <li><a href="index.html">Accueil</a></li>
-              <li><a href="p">Produits</a></li>
-              <li><a href="presentation.html">Presentation</a></li>
+              <li><a href="../index.php">Accueil</a></li>
+              <li><a href="compte.php">Produits</a></li>
+              <li><a href="presentation.php">Presentation</a></li>
               <li><a class="active" href="#">Local</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="contact.php">Contact</a></li>
             </ul>
           </div>
           <div class="social-links col-lg-3 col-md-6">

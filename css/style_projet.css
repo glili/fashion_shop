@@ -30,6 +30,20 @@ ul {
 	gap: 5px;
 }
 
+table{
+    font-family:'Sans Comic Sans', sans-serif;
+    font-size: 80%;
+    text-align: center;
+    color: blue;
+    border: 2px solid gray;
+    background-color: #fff;
+    border-collapse: collapse;
+}
+
+th, td{
+    border: 1px dotted gray;
+}
+
 .padded{
     padding: 15px;
 }

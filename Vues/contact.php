@@ -17,64 +17,46 @@
   <!-- navigation -->
   <nav class="navbar navbar-expand-md navbar-light">
     <div class="container-fluid">
-      <a href="#" class="navbar-brand"><img src="image/logo.webp" alt="Logo LaMode fashion store"></a>
+      <a href="#" class="navbar-brand"><img src="../image/logo.webp" alt="Logo LaMode fashion store"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item "><a href="index.html" class="nav-link">Accueil</a></li>
-          <li class="nav-item"><a href="produits.html" class="nav-link">Produits</a></li>
-          <li class="nav-item"><a href="presentation.html" class="nav-link">Presentation</a></li>
-          <li class="nav-item"><a href="local.html" class="nav-link">Local</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item"><a href="#" class="nav-link active">Compte</a></li>
-
+          <li class="nav-item"><a href="../index.php" class="nav-link">Accueil</a></li>
+          <li class="nav-item"><a href="compte.php" class="nav-link">Produits</a></li>
+          <li class="nav-item"><a href="presentation.php" class="nav-link">Presentation</a></li>
+          <li class="nav-item"><a href="local.php" class="nav-link">Local</a></li>
+          <li class="nav-item"><a href="#" class="nav-link active">Contact</a></li>
+          <li class="nav-item"><a href="compte.php" class="nav-link">Compte</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- banner -->
-  <div class="container-fluid banner padded">
-    <div class="row">
-      <div class="offset-lg-2 col-lg-4 padded">
-        <h1>Soyez belles et beaux</h1>
-        <p>Vous trouverez ici des articles pour toutes les occasions, ainsi que des accessoires.
-          <br>Nous savons comment vous aider à montrer élégant, moderne, intéressant.
-          <br>Nous pouvons vous aider à avoir confiance en soi.
-        </p>
-      </div>
-      <div class="banner-img image-fluid offset-lg-2 col-md-2 col-lg-4 padded">
-        <img src="image/clothes-shopping.gif" alt="main banner">
-      </div>
-
-    </div>
-  </div>
-
-  <!-- login form -->
+  <!-- contact form -->
   <div class="container ml-auto">
     <div class="row">
       <div class="col-lg-3"></div>
       <div class="col-lg-6">
         <div id="form-inscription">
-          <h1 class="text-center">Acceder votre compte:</h1>
-          <form class="form-group" action="index.php" method="post" name="form-compte"
-            onsubmit="return(validationInfo('form-compte'));">
+          <h1 class="text-center">Pour nous joindre:</h1>
+          <form class="form-group" action="index.php" method="post" name="form-contact"
+            onsubmit="return(validationInfo('form-contact'));">
             <div class="row">
-              <div class="col-lg-6">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Enntrez votre email">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" class="form-control" placeholder="Enntrez votre email">
+              <label for="motif">Motif du contact</label>
+              <input type="text" class="form-control" id="motif" placeholder="Entez le motif du contact">
+
+              <textarea name="message" cols="52" rows="5" onclick="this.value=''">Message</textarea>
+
+              <div class="checkbox col-lg-8">
+                <label for="checkbox"><input type="checkbox" id="checkbox"> Voulais vous inscrire a notre
+                  infolettre</label>
               </div>
-              <div class="col-lg-6">
-                <label for="password">Mot de passe</label>
-                <input type="password" name="password" id="password" class="form-control"
-                  placeholder="Entrez un mot de passe">
-              </div>
-            </div>
-            <button type="submit" name="submit" value="submit" class="btn btn-primary">Se connecter</button>
-            <div class="col-lg-6 d-inline">
-              <p class="choise">pas de compte? <a href="inscription.html" type="button">Creer compte</a></p>
+
+              <button type="submit" name="submit" value="submit" class="btn btn-primary">Envoyer</button>
             </div>
           </form>
         </div>
@@ -82,7 +64,7 @@
       <div class="col-lg-3"></div>
     </div>
   </div>
-
+  
   <!-- footer -->
   <footer class="footer">
     <div class="footer-top">
@@ -91,11 +73,11 @@
           <div class="footer-links col-lg-3 col-md-6 ">
             <h2>La Mode</h2>
             <ul>
-              <li><a href="index.html">Accueil</a></li>
-              <li><a href="produits.html">Produits</a></li>
-              <li><a href="presentation.html">Presentation</a></li>
-              <li><a href="local.html">Local</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="../index.php">Accueil</a></li>
+              <li><a href="compte.html">Produits</a></li>
+              <li><a href="presentation.php">Presentation</a></li>
+              <li><a href="local.php">Local</a></li>
+              <li><a class="active" href="#">Contact</a></li>
             </ul>
           </div>
           <div class="social-links col-lg-3 col-md-6">

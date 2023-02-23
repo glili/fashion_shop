@@ -17,18 +17,18 @@
   <!-- navigation -->
   <nav class="navbar navbar-expand-md navbar-light">
     <div class="container-fluid">
-      <a href="#" class="navbar-brand"><img src="image/logo.webp" alt="Logo LaMode fashion store"></a>
+      <a href="#" class="navbar-brand"><img src="../image/logo.webp" alt="Logo LaMode fashion store"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
-          <li class="nav-item"><a href="produits.html" class="nav-link">Produits</a></li>
+          <li class="nav-item"><a href="../index.php" class="nav-link">Accueil</a></li>
+          <li class="nav-item"><a href="compte.php" class="nav-link">Produits</a></li>
           <li class="nav-item"><a href="#" class="nav-link active">Presentation</a></li>
-          <li class="nav-item"><a href="local.html" class="nav-link">Local</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item"><a href="compte.html" class="nav-link">Compte</a></li>
+          <li class="nav-item"><a href="local.php" class="nav-link">Local</a></li>
+          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="compte.php" class="nav-link">Compte</a></li>
         </ul>
       </div>
     </div>
@@ -52,7 +52,7 @@
           repudiandae tempore nemo magni sed quod rerum? Explicabo a saepe consectetur id, ducimus qui nobis
           dicta nostrum, at tenetur, repellat dolorum.</p>
         <div class="offset-8 col-3 text-right">
-          <a href="#"><button class="btn btn-lg" type="button">Suite...</button></a>
+          <button class="btn btn-lg" type="button">Suite...</button>
         </div>
       </div>
       <hr>
@@ -72,7 +72,7 @@
           ducimus eius corporis sed!Lorem30 </p>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
-        <a href="#"><button class="btn btn-lg" type="button">Suite...</button></a>
+        <button class="btn btn-lg" type="button">Suite...</button>
       </div>
     </div>
   </div>
@@ -87,7 +87,7 @@
           ducimus eius corporis sed!Lorem30 </p>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
-        <a href="#"><button class="btn btn-lg" type="button">Suite...</button></a>
+        <button class="btn btn-lg" type="button">Suite...</button>
       </div>
     </div>
   </div>
@@ -102,7 +102,7 @@
           ducimus eius corporis sed!Lorem30 </p>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
-        <a href="#"><button class="btn btn-lg" type="button">Suite...</button></a>
+        <button class="btn btn-lg" type="button">Suite...</button>
       </div>
     </div>
   </div>
@@ -117,11 +117,11 @@
           <div class="footer-links col-lg-3 col-md-6 ">
             <h2>La Mode</h2>
             <ul>
-              <li><a href="index.html">Accueil</a></li>
-              <li><a href="produits.html">Produits</a></li>
+              <li><a href="../index.php">Accueil</a></li>
+              <li><a href="compte.php">Produits</a></li>
               <li><a class="active" href="#">Presentation</a></li>
-              <li><a href="local.html">Local</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="local.php">Local</a></li>
+              <li><a href="contact.php">Contact</a></li>
             </ul>
           </div>
           <div class="social-links col-lg-3 col-md-6">

@@ -1,6 +1,6 @@
 <?php
 
-// Classe représentant un produit pour vente dans un commerce
+// Classe représentant un produit
 class Utilisateur {
 	// Attributs
 	private $nomUtilisateur;
@@ -12,8 +12,8 @@ class Utilisateur {
 	private $motPasse;
 	
 
-	// Constructeur
-	public function __construct($nomUtilisateur, $prenomUtilisateur, $email,$genre,$infolettre,$administrateur,$motPasse){
+	// Constructor
+	public function __construct($nomUtilisateur, $prenomUtilisateur, $motPasse, $email,$genre,$infolettre=false,$administrateur= false){
 		$this->nomUtilisateur=$nomUtilisateur;
 		$this->prenomUtilisateur=$prenomUtilisateur;
 		$this->email=$email;
@@ -23,19 +23,19 @@ class Utilisateur {
 		$this->motPasse=$motPasse;
 	}
 	
-	// Accesseurs et mutateurs
-	public function getNomUtilisateur() {return $this->nomUtilisateur;}
-	public function getPrenomUtilisateur() {return $this->prenomUtilisateur;}
-	public function getEmai() {return $this->email;}
+	// Getters setters
+	public function getNom() {return $this->nomUtilisateur;}
+	public function getPrenom() {return $this->prenomUtilisateur;}
+	public function getEmail() {return $this->email;}
 	public function getGenre() {return $this->genre;}
 	public function getInfolettre() {return $this->infolettre;}
 	public function getAdmin() {return $this->administrateur;}
 	public function getMotPasse() {return $this->motPasse;}
 
-	// Autres méthodes
-	public function verifierMotPasse($motAVerifier) { return $this->motPasse == $motAVerifier; }
+	//  methodes
+	public function checkPassword($motAVerifier) { return $this->motPasse == $motAVerifier; }
 	
-	// Affichage
+	// display
 	public function __toString(){
 		$message=$this->nomUtilisateur;
 		return $message;
