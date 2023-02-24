@@ -15,10 +15,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (isset($_POST['email']) and isset($_POST['password'])) {
     $value = $_POST['email'];
     setcookie("email", $value, time() +1800);
+    $_SESSION['email']=$value;
   }
-
-  $_SESSION['email'] = '';
   session_start();
+
+  if(isset($_SESSION['email'])){
+    header("Location: produits.php");
+  }
 }
 ?>
 

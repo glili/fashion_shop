@@ -7,7 +7,7 @@ $mainFolder = $_SERVER['DOCUMENT_ROOT']."/fashion_shop/";
 
 include_once($mainFolder."modele/utilisateur.class.php");
 include_once($mainFolder."modele/DAO/UtilisateurDAO.class.php");
-
+session_start();
 ?>
 
 <!DOCTYPE html>
