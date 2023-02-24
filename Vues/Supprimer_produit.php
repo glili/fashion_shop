@@ -54,9 +54,9 @@ session_start();
   <?php
    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-  if(isset($_POST['code'])){
+    if(isset($_POST['code']) && ($_POST['code']) !="" ){
     $key= $_POST['code'];
-  }
+  
   $prod= new ProduitDAO();
 
   $prod=ProduitDAO::display($key);
@@ -70,6 +70,8 @@ session_start();
   echo "<td>".$prod->getQuantite() ."</td>";
 
   echo "</tr>";
+    }else{  
   $prod=ProduitDAO::delete($prod);
+    }
 }  
      ?>

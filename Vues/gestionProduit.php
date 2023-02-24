@@ -10,15 +10,15 @@ include_once(mainFolder."modele/DAO/ProduitDAO.class.php");
 
  include "header.php";
 
-	// on récupère la session, ou on en crée un nouvelle
-	session_start();
-	// 	// Si l'ulisateurConnecte n'exsite pas, alors on redirige vers la page de connexion
-	if(!ISSET($_SESSION['userConnected'])){
+	// // on récupère la session, ou on en crée un nouvelle
+	// session_start();
+	// // 	// Si l'ulisateurConnecte n'exsite pas, alors on redirige vers la page de connexion
+	// if(!ISSET($_SESSION['userConnected'])){
 			
 
-	// 	// On récupère le nom pour l'affichage
-		$nomUtilisateur = $_SESSION['userConnected'];
-		}
+	// // 	// On récupère le nom pour l'affichage
+	// 	$nomUtilisateur = $_SESSION['userConnected'];
+	// 	}
 ?>
 
 <nav class="navbar navbar-expand-md navbar-light">
@@ -35,7 +35,7 @@ include_once(mainFolder."modele/DAO/ProduitDAO.class.php");
         </ul>
     </div>
   </nav>
-	<h1>Bienvenu <?php  echo $nomUtilisateur;?> </h1>
+	<!-- <h1>Bienvenu <?php  echo $nomUtilisateur;?> </h1> -->
 
 
 </body>

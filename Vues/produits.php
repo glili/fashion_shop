@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+if(isset ($_SESSION['userConnected'])){
+  header("Location: compte.pp");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
