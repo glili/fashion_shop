@@ -10,7 +10,11 @@ include_once(mainFolder . "modele/DAO/ProduitDAO.class.php");
 include_once(mainFolder . "modele/produits.class.php");
 session_start();
 include "header.php";
-?>
+
+
+ 
+     
+     ?>
 <nav class="navbar navbar-expand-md navbar-light">
     <div class="container-fluid">
         <ul class="navbar-nav ml-auto">
@@ -26,21 +30,20 @@ include "header.php";
     </div>
   </nav>
 
-<form method="POST" action="chercher_produit.php">
+  <?php
+  
+  
+
+ ?>  
+
+<form method="POST" action="Chercher_produits.php">
   <label for="code">Code:</label>
   <input type="text" id="code" name="code">
 
   <label for="description">Description:</label>
   <input type="text" id="description" name="description">
 
-  <input type="submit" value="Chercher">
-</form>
-
-<form method="POST" action="chercher_produits.php">
-  <label for="search_term">Rechercher:</label>
-  <input type="text" id="search_term" name="search_term">
-
-  <input type="submit" value="Chercher">
+  <button type="submit" value="Chercher">Chercher</button>
 </form>
 
 <table>
@@ -56,27 +59,50 @@ include "header.php";
     </tr>
   </thead>
   <tbody>
-  
   <?php
-  if(isset($_POST['search_term'])){
-    if($key);
+    // print_r($filtre);
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+  if(isset($_POST['code']) && ($_POST['code']) !="" ){
+    
+    $prod= new ProduitDAO();
+    $key= $_POST['code'];
+    $prod=ProduitDAO::display($key);
+    echo "<tr>";  
+    echo "<td>".$prod->getCode() ."</td>";
+    echo "<td>".$prod->getTitle() ."</td>";
+    echo "<td>".$prod->getDescription() ."</td>";
+    echo "<td>".$prod->getMarque() ."</td>";
+    echo "<td>".$prod->getUrlPhoto() ."</td>";
+    echo "<td>".$prod->getPrix() ."</td>";
+    echo "<td>".$prod->getQuantite() ."</td>";
+    echo "</tr>";
+  } else {
+    // print_r($_POST);
+    $prod= new ProduitDAO();
+    $value = $_POST['description'];
+    $filtre= 'where description Like "'.$value.'%"';
+    $prod=ProduitDAO::displaySorted($filtre);
+    foreach($prod as $value){
+    echo "<tr>";  
+    echo "<td>".$value->getCode() ."</td>";
+    echo "<td>".$value->getTitle() ."</td>";
+    echo "<td>".$value->getDescription() ."</td>";
+    echo "<td>".$value->getMarque() ."</td>";
+    echo "<td>".$value->getUrlPhoto() ."</td>";
+    echo "<td>".$value->getPrix() ."</td>";
+    echo "<td>".$value->getQuantite() ."</td>";
+    echo "</tr>";
+    }
   }
-     $prod= new ProduitDAO();
+  
+
+  }
      
-     $prod=ProduitDAO::display($key);
-     echo "<tr>";  
-         echo "<td>".$prod->getCode() ."</td>";
-         echo "<td>".$prod->getTitle() ."</td>";
-         echo "<td>".$prod->getDescription() ."</td>";
-         echo "<td>".$prod->getMarque() ."</td>";
-         echo "<td>".$prod->getUrlPhoto() ."</td>";
-         echo "<td>".$prod->getPrix() ."</td>";
-         echo "<td>".$$prod->getQuantite() ."</td>";
-        
-         echo "</tr>";
-     
-     
-     ?>
+ 
+  ?>
+
   </tbody>
 </table>
 </body>

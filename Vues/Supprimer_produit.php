@@ -1,4 +1,13 @@
 <?php
+if (defined("mainFolder") == false) {
+	define("mainFolder", $_SERVER['DOCUMENT_ROOT']."/fashion_shop/");
+}
+// Importe l'interface DAO et la classe Produit
+
+include_once(mainFolder."modele/produits.class.php");
+include_once(mainFolder."modele/DAO/ProduitDAO.class.php");
+
+
 session_start();
  include "header.php";
 ?>
@@ -17,3 +26,50 @@ session_start();
         </ul>
     </div>
   </nav>
+
+  <form method="POST" action="Supprimer_produit.php">
+  <label for="code">Code:</label>
+  <input type="text" id="code" name="code">
+
+
+  <button type="submit" value="Chercher">Chercher</button>
+  <button type="submit" value="Chercher">Supprimer</button>
+ </form>
+
+
+<table>
+  <thead>
+  <tr>
+    <th>Code</th>
+    <th>Titre</th>
+    <th>Description</th>
+    <th>Marque</th>
+    <th>URL Photo</th>
+    <th>Prix</th>
+    <th>Quantité</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <?php
+   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+  if(isset($_POST['code'])){
+    $key= $_POST['code'];
+  }
+  $prod= new ProduitDAO();
+
+  $prod=ProduitDAO::display($key);
+  echo "<tr>";  
+  echo "<td>".$prod->getCode() ."</td>";
+  echo "<td>".$prod->getTitle() ."</td>";
+  echo "<td>".$prod->getDescription() ."</td>";
+  echo "<td>".$prod->getMarque() ."</td>";
+  echo "<td>".$prod->getUrlPhoto() ."</td>";
+  echo "<td>".$prod->getPrix() ."</td>";
+  echo "<td>".$prod->getQuantite() ."</td>";
+
+  echo "</tr>";
+  $prod=ProduitDAO::delete($prod);
+}  
+     ?>

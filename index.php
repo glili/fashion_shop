@@ -10,6 +10,7 @@ include_once(mainFolder."modele/DAO/ProduitDAO.class.php");
 
 // include_once 'Vues/header.php';
 
+
 session_start();
 	
 ?>
@@ -122,7 +123,7 @@ $prod=ProduitDAO::displaySorted($title);
             
 <?php
 foreach ($prod as $value) {
-    echo '<li class="slide"><img src="'.$value->getUrlPhoto().'" alt="Slide img3"></li>';
+    echo '<li class="slide"><img src="'.$value->getUrlPhoto().'" alt="Slide img"></li>';
 }
 ?>
         </ul>

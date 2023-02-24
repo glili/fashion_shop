@@ -7,27 +7,38 @@ class Produit {
         private $title;
         private $description;
         private $marque;
-        private $urlPhoto;
+        private $url_photo;
         private $prix;
         private $quantite;
 
         // Constructor
-        public function __construct($code, $title,$desc,$marque,$url,$prix,$qte){
+        public function constr($title,$description,$marque,$prix,$quantite,$url_photo){
+                $this->title=$title;
+                $this->description=$description;
+                $this->marque=$marque;
+                $this->url_photo=$url_photo;
+                $this->prix=$prix;
+                $this->quantite=$quantite;
+        }
+
+        public function __construct($code, $title,$description,$marque,$prix,$quantite,$url_photo){
                 $this->code=$code;
                 $this->title=$title;
-                $this->description=$desc;
+                $this->description=$description;
                 $this->marque=$marque;
-                $this->urlPhoto=$url;
+                $this->url_photo=$url_photo;
                 $this->prix=$prix;
-                $this->quantite=$qte;
+                $this->quantite=$quantite;
         }
+
+        
 
         // Getters setters
         public function getCode() {return $this->code;}
         public function getTitle() {return $this->title;}
         public function getDescription() {return $this->description;}
         public function getMarque() {return $this->marque;}
-        public function getUrlPhoto() {return $this->urlPhoto;}
+        public function getUrlPhoto() {return $this->url_photo;}
         public function getPrix() {return $this->prix;}
         public function getQuantite() {return $this->quantite;}
         public function setCode($valeur) {$this->code=$valeur;}
@@ -35,7 +46,7 @@ class Produit {
         public function setDescription($valeur) {$this->description=$valeur;}
         public function setMarque($valeur) {$this->marque=$valeur;}
         public function setQuantite($valeur) {$this->quantite=$valeur;}
-        public function setUrlPhoto($valeur) {$this->urlPhoto=$valeur;}
+        public function setUrlPhoto($valeur) {$this->url_photo=$valeur;}
         public function setPrix($valeur) {$this->prix=$valeur;}
 
         // methodes

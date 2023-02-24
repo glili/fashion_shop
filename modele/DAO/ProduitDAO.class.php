@@ -86,7 +86,7 @@ class ProduitDAO implements DAO
 		$query->execute();
 
 		foreach ($query as $tab) {
-			$leProduit = new Produit($tab['code'], $tab['title'], $tab['description'], $tab['marque'], $tab['url_photo'], $tab['prix'], $tab['quantite']);
+			$leProduit = new Produit($tab['code'], $tab['title'], $tab['description'], $tab['marque'], $tab['prix'], $tab['quantite'], $tab['url_photo']);
 			array_push($liste, $leProduit);
 		}
 		$query->closeCursor();
@@ -104,9 +104,9 @@ class ProduitDAO implements DAO
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
 
-		$commandeSQL = "INSERT INTO Produits (code, title, description,marque, url_photo, prix, quantite)";
+		$commandeSQL = "INSERT INTO Produits (code,title,description,marque,prix,quantite,url_photo)";
 		$commandeSQL .= "VALUES(?,?,?,?,?,?,?)";
-		$tab = array($unProduit->get_code(), $unProduit->get_description(), $unProduit->get_url_photo(), $unProduit->get_prix(), $unProduit->get_quantite());
+		$tab = array($unProduit->getCode(),$unProduit->getTitle(), $unProduit->getDescription(),$unProduit->getMarque(),$unProduit->getPrix(), $unProduit->getQuantite(),$unProduit->getUrlPhoto());
 		$requete = $connexion->prepare($commandeSQL);
 
 		return $requete->execute($tab);
@@ -120,9 +120,9 @@ class ProduitDAO implements DAO
 		} catch (Exception $e) {
 			throw new Exception("Impossible d’obtenir la connexion à la BD.");
 		}
-		$commandeSQL = "UPDATE Produits (code, title, description,marque, url_photo, prix, quantite)";
+		$commandeSQL = "UPDATE Produits (codetitle,description,marque,prix,quantite,urlPhoto)";
 		$query = $connexion->prepare($commandeSQL);
-		$tab = array($unProduit->get_code(), $unProduit->get_description(), $unProduit->get_url_photo(), $unProduit->get_prix(), $unProduit->get_quantite());
+		$tab = array($unProduit->getCode(),$unProduit->getTitle(), $unProduit->getDescription(),$unProduit->getMarque(),$unProduit->getPrix(), $unProduit->getQuantite(),$unProduit->getUrlPhoto());
 		return	$query->execute($tab);
 	}
 

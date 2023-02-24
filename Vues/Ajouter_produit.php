@@ -10,7 +10,7 @@ include_once(mainFolder . "modele/DAO/ProduitDAO.class.php");
 include_once(mainFolder . "modele/produits.class.php");
 
 session_start();
- include "header.php";
+include "header.php";
 ?>
 
 <nav class="navbar navbar-expand-md navbar-light">
@@ -28,6 +28,8 @@ session_start();
     </div>
   </nav>
 <form action="Ajouter_produit.php" method="post">
+<label for="code">Code:</label>
+  <input type="code" id="code" name="code"><br><br>
   <label for="title">Titre:</label>
   <input type="text" id="title" name="title"><br><br>
   <label for="description">Description:</label>
@@ -42,21 +44,24 @@ session_start();
   <input type="number" id="quantite" name="quantite"><br><br>
   <input type="submit" value="Ajouter">
 </form>
-<?php
-if(isset ($_POST['title']) && isset($_POST['description']) && isset ($_POST['marque']) && isset ($_POST['urlPhoto']) && isset ($_POST['quantite']) ){
-  $code = $_POST['code'];
-  $title = $_POST['title'];
-  $description = $_POST['description'];
-  $marque = $_POST['marque'];
-  $urlPhoto = $_POST['urlPhoto'];
-  $prix = $_POST['prix'];
-  $quantite = $_POST['quantite'];
- 
 
-  $produit = new ProduitDAO();
-  $prod = new Produit($code,$title,$desc,$marque,$url,$prix,$qte);
-  $produit->insert($prod);
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+  // if(isset ($_POST['code']) && ($_POST['title']) && isset($_POST['description']) && isset ($_POST['marque']) && isset ($_POST['urlphoto']) && isset ($_POST['quantite']) ){
+    $code = $_POST['code'];
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+    $marque = $_POST['marque'];
+    $urlPhoto = $_POST['urlphoto'];
+    $prix = $_POST['prix'];
+    $quantite = $_POST['quantite'];
   
+    $produit = new ProduitDAO();
+    $prod = new Produit($code,$title,$description,$marque,$prix,$quantite,$urlPhoto);
+    $produit->insert($prod);
+    
+  // }
 }
 ?>
 </body>

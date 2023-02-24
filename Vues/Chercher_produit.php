@@ -30,10 +30,11 @@ session_start();
   <label for="code">Code:</label>
   <input type="text" id="code" name="code">
 
-  <label for="description">Description:</label>
-  <input type="text" id="description" name="description">
+  <!-- <label for="description">Description:</label>
+  <input type="text" id="description" name="description"> -->
 
-  <input type="submit" value="Chercher">
+  <button type="submit" value="Chercher">Chercher</button>
+  <a href="Chercher_produit.php"><input type="button" value="Reset"/><a>
 </form>
 
 
@@ -51,26 +52,45 @@ session_start();
   </thead>
   <tbody>
   <?php
+ 
+   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
   if(isset($_POST['code'])){
+    $prod= new ProduitDAO();
     $key= $_POST['code'];
-  }else if (isset($_POST['description'])){
-    $key= $_POST['description'];
+    $prod=ProduitDAO::display($key);
+    echo "<tr>";  
+    echo "<td>".$prod->getCode() ."</td>";
+    echo "<td>".$prod->getTitle() ."</td>";
+    echo "<td>".$prod->getDescription() ."</td>";
+    echo "<td>".$prod->getMarque() ."</td>";
+    echo "<td>".$prod->getUrlPhoto() ."</td>";
+    echo "<td>".$prod->getPrix() ."</td>";
+    echo "<td>".$prod->getQuantite() ."</td>";
+  
+    echo "</tr>";
+  // }else if (isset($_POST['description'])){
+  //   $prodv= new ProduitDAO();
+  //   $value = $_POST['description'];
+  //   $filtre= 'where description Like "$value%"';
+  //   $prodv=ProduitDAO::displaySorted($filtre);
+  //   foreach($prodv as $value){
+  //   echo "<tr>";  
+  //   echo "<td>".$value->getCode() ."</td>";
+  //   echo "<td>".$value->getTitle() ."</td>";
+  //   echo "<td>".$value->getDescription() ."</td>";
+  //   echo "<td>".$value->getMarque() ."</td>";
+  //   echo "<td>".$value->getUrlPhoto() ."</td>";
+  //   echo "<td>".$value->getPrix() ."</td>";
+  //   echo "<td>".$value->getQuantite() ."</td>";
+  //   echo "</tr>";
+  //   }
+  // }
+  
+
   }
-     $prod= new ProduitDAO();
      
-     $prod=ProduitDAO::display($key);
-     echo "<tr>";  
-         echo "<td>".$prod->getCode() ."</td>";
-         echo "<td>".$prod->getTitle() ."</td>";
-         echo "<td>".$prod->getDescription() ."</td>";
-         echo "<td>".$prod->getMarque() ."</td>";
-         echo "<td>".$prod->getUrlPhoto() ."</td>";
-         echo "<td>".$prod->getPrix() ."</td>";
-         echo "<td>".$$prod->getQuantite() ."</td>";
-        
-         echo "</tr>";
-     
-     
+}  
      ?>
   </tbody>
 </table>

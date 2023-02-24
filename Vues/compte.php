@@ -4,11 +4,22 @@ if (defined("mainFolder") == false) {
 }
 
 $mainFolder = $_SERVER['DOCUMENT_ROOT']."/fashion_shop/";
-
 include_once($mainFolder."modele/utilisateur.class.php");
 include_once($mainFolder."modele/DAO/UtilisateurDAO.class.php");
+?>
 
-session_start();
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+  if (isset($_POST['email']) and isset($_POST['password'])) {
+    $value = $_POST['email'];
+    setcookie("email", $value, time() +1800);
+  }
+
+  $_SESSION['email'] = '';
+  session_start();
+}
 ?>
 
 <!DOCTYPE html>
